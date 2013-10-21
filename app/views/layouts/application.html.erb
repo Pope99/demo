@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @page_title || "Event application"%></title>
+  <%= stylesheet_link_tag    "application"%>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<p stytle ="color: green"><%=flash[:notice]%></p>
+<p stytle = "color: red"><%=flash[:alert]%></p>
+<%= yield %>
+
+</body>
+</html>

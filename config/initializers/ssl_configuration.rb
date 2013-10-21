@@ -1,0 +1,1 @@
+ENV["SSL_CERT_FILE"] = "/usr/local/rvm/usr/ssl/certs/cacerts"

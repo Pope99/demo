@@ -1,0 +1,27 @@
+<%require 'net/http'%>
+<%require 'rubygems'%>
+<%require 'rexml/document'%>
+<%require 'google_custom_search'%>
+<%require 'openssl'%>
+
+
+<%= @event.name %>
+<%= simple_format(@event.description) %>
+
+<% @results["items"].each do |item| %>
+  <%= QQ%>
+  <%end%>
+<p><%= link_to 'Back to index', event_path%></p>
+<script>
+  (function() {
+    var cx = '007459114171425962473:ga91atenyjm';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
